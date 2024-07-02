@@ -35,5 +35,7 @@ Included in this repository is a comprehensive Software Design Document. This do
 
 This document serves as a practice in creating and refining future Software Design Documents, offering an in-depth look at the project's development.
 
-Current Status
+## Current Status
 Both the website and the Software Design Document are works in progress (WIP).
+
+
