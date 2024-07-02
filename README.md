@@ -13,7 +13,7 @@ Welcome to the revamped version of my portfolio website! This iteration leverage
 ## Testing Strategy
 Inside the root of this repository, you can find component tests ensuring that:
 
-* `Functionality`: Each component operates correctly.
+* `Functionality`: Each component operates correctly based on provided inputs.
 * `Expected Values`: Components have the correct div elements and character values.
 * `Correct Div Amount`: Specific sections have the correct number of divs.
 
