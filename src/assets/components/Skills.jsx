@@ -1,3 +1,11 @@
+/*
+Importing necessary libraries:
+
+React: For react functionality
+GSAP: For animations
+Images: For showcasing skills
+Images: For media queries (resolution)
+*/
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -19,8 +27,11 @@ import react from "../images/react.png";
 import greensock from "../images/greensock.png";
 import vite from "../images/vite.png";
 
+import "../css/skills.css"
+
 gsap.registerPlugin(ScrollTrigger);
 
+// Skills component
 function Skills() {
   useGSAP(() => {
     // Animating skill letters
@@ -222,6 +233,12 @@ function Skills() {
     );
   });
 
+  // Return statement using HTML and TailwindCSS.
+
+  /*
+  Each skillSection contains an image associated with that skill, and the title of that skill.
+  For small resolutions, the skill names will not come up but the logo associated with that skill will.  
+  */
   return (
     <div className="skillSection relative h-screen w-screen">
       <div className="skillTitleWrap absolute w-[20%] h-[10%] justify-center items-center flex transform left-1/2 top-[20%] -translate-x-1/2 -translate-y-1/ font-bold text-[7vh] text-[#222222]">

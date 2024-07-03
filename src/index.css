@@ -1,3 +1,6 @@
+/*
+Importing tailwind setup, along with fonts.
+*/
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -7,8 +10,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+Default body setting along with no-scroll. 
+This is so the user cannot scroll while the welcome screen is playing.
+*/
 body {
     margin: 0;
     padding: 0;
   }
+
+
+.no-scroll {
+  overflow: hidden;
+}
 

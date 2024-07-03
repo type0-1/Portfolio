@@ -1,3 +1,14 @@
+/// <reference types="vitest" />
+
+/* 
+Importing necessary libraries and the About component for testing.
+
+React: For react functionality
+Experiences: The experiences component
+Render: Rendering components for testing.
+Chai: Assertion library.
+*/
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import Experiences from '../src/assets/components/Experiences';
@@ -5,6 +16,10 @@ import { expect } from 'chai';
 
 describe('Experiences component', () => {
   it('renders without crashing and contains the main div components', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they exist.
+    */
     const { container } = render(<Experiences />);
 
     const experienceSection = container.querySelector('.experienceSection');
@@ -21,6 +36,10 @@ describe('Experiences component', () => {
   });
 
   it('contains the correct text content in experience sections', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the right content/letters.
+    */
     const { container } = render(<Experiences />);
 
     const experienceTitles = [
@@ -50,6 +69,10 @@ describe('Experiences component', () => {
   });
 
   it('contains the correct class names', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the respective class names associated with it.
+    */
     const { container } = render(<Experiences />);
 
     const experienceTitleWrap = container.querySelector('.experienceTitleWrap');

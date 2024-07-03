@@ -1,10 +1,26 @@
+/// <reference types="vitest" />
+
+/* 
+Importing necessary libraries and the About component for testing.
+
+React: For react functionality
+Navbar: The navbar component
+Render: Rendering components for testing.
+Chai: Assertion library.
+*/
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import Navbar from '../src/assets/components/Navbar';
 import { expect } from 'chai';
 
+
 describe('Navbar component', () => {
   it('renders without crashing and contains the main div components', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they exist.
+    */
     const { container } = render(<Navbar />);
 
     const navBar = container.querySelector('.navBar');
@@ -21,6 +37,10 @@ describe('Navbar component', () => {
   });
 
   it('contains the correct text content in navBarSection', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the right content.
+    */
     const { container } = render(<Navbar />);
 
     const navBarSections = container.querySelectorAll('.navBarSection');
@@ -33,6 +53,10 @@ describe('Navbar component', () => {
   });
 
   it('contains the correct class names', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the respective class names associated with it.
+    */
     const { container } = render(<Navbar />);
 
     const navBar = container.querySelector('.navBar');

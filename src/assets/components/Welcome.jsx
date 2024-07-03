@@ -1,16 +1,23 @@
+/*
+Importing necessary libraries and modules.
+
+React and useRef for React specific usage.
+GSAP, and useGSAP hook for animation 
+*/
+
 import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { TextPlugin } from 'gsap/all';
 
-gsap.registerPlugin(TextPlugin);
+// Welcome component function (isAnimationComplete) hook passed in as "onComplete".
 
 const Welcome = ({ onComplete }) => {
   const textRef = useRef(null);
   const containerRef = useRef(null);
 
+  // Function to animate the text introduction.
   function textIntro() {
-    const t = gsap.timeline();
+    const t = gsap.timeline(); // Initialise timeline. 
     t.fromTo('.studentAnim', {
       opacity: 0,
       y: -5,
@@ -19,18 +26,18 @@ const Welcome = ({ onComplete }) => {
     }, {
       opacity: 1,
       y: 5,
-      stagger: {
+      stagger: { // Stagger is used to animate each letter with class name "studentAnim"
         each: 0.1,
       },
     })
-      .to('.studentAnim', {
+      .to('.studentAnim', { // Final "Student" animation
         opacity: 0,
         y: 10,
         stagger: {
           each: 0.1,
         },
       })
-      .fromTo('.freeWrap', {
+      .fromTo('.freeWrap', { // Start of "Freelancer" animation
         opacity: 0,
       }, {
         opacity: 1,
@@ -58,8 +65,13 @@ const Welcome = ({ onComplete }) => {
     return t;
   }
 
+  // Function to conclude (animating the black background to down)
   function conclude() {
-    const timeline = gsap.timeline();
+    /*
+    Below is an implementation of changing the display as "None" then declaring a function.
+    This function enables scrolling after animation is completed.
+     */
+    const timeline = gsap.timeline(); 
     timeline.to(containerRef.current, {
       duration: 1,
       ease: 'power1.inOut',
@@ -67,17 +79,26 @@ const Welcome = ({ onComplete }) => {
     })
       .to(containerRef.current, {
         display: 'none',
-        onComplete,
+        onComplete: () => {
+          // Enable scrolling after the animation completes
+          document.body.style.overflow = 'auto';
+          if (onComplete) {
+            onComplete();
+          }
+        },
       });
     return timeline;
   }
 
+
+  // useGSAP hook for managing the timing of animation.
   useGSAP(() => {
     const main = gsap.timeline();
     main.add(textIntro());
     main.add(conclude(), '-=0.5'); // Start counter animation immediately
   }, [onComplete]);
 
+  // Return function using HTML and TailwindCSS.
   return (
     <div className="relative overflow-hidden z-[50]">
       <div className="h-screen flex bg-black justify-center items-center" ref={containerRef}>

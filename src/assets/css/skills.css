@@ -1,0 +1,115 @@
+/*
+This file "skills.css" contains media queries which styles the 
+CSS differently for each component depending on the resolution
+the user is viewing the website on.
+
+This website has mostly been tested on resolutions that use a 
+4:3 aspect ratio, though other phone sizes have been considered
+as well.
+*/
+
+@media (min-width: 1920px) {
+    .skillTitleWrap {
+      font-size: 7vh;
+    }
+    .skillText {
+      font-size: 2.5vh;
+    }
+    .skillImg {
+      height: 60px;
+      width: 60px;
+    }
+  }
+  
+  @media (max-width: 1536px) and (min-width: 1366px) {
+    .skillTitleWrap {
+      font-size: 6vh;
+    }
+    .skillText {
+      font-size: 2.2vh;
+    }
+    .skillImg {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  
+  @media (max-width: 1366px) and (min-width: 1280px) {
+    .skillTitleWrap {
+      font-size: 5.5vh;
+    }
+    .skillText {
+      font-size: 2vh;
+    }
+    .skillImg {
+      height: 45px;
+      width: 45px;
+    }
+  }
+  
+  @media (max-width: 1280px) and (min-width: 1024px) {
+    .skillTitleWrap {
+      font-size: 5vh;
+    }
+    .skillText {
+      font-size: 1.8vh;
+    }
+    .skillImg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .skillTitleWrap {
+      font-size: 4.5vh;
+    }
+    .skillText {
+      font-size: 1.6vh;
+    }
+    .skillImg {
+      height: 35px;
+      width: 35px;
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width: 640px) {
+    .skillTitleWrap {
+      font-size: 4vh;
+    }
+    .skillText {
+      font-size: 1.5vh;
+    }
+    .skillImg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  
+  @media (max-width: 640px) and (min-width: 360px) {
+    .skillTitleWrap {
+      font-size: 3.5vh;
+    }
+    .skillText {
+      opacity:0;
+      font-size: 0vh
+    }
+    .skillImg {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .skillTitleWrap {
+      font-size: 3vh;
+    }
+    .skillText {
+      font-size: 0vh;
+      opacity:0;
+    }
+    .skillImg {
+      height: 20px;
+      width: 20px;
+    }
+  }

@@ -1,0 +1,108 @@
+/*
+This file "experiences.css" contains media queries which styles the 
+CSS differently for each component depending on the resolution
+the user is viewing the website on.
+
+This website has mostly been tested on resolutions that use a 
+4:3 aspect ratio, though other phone sizes have been considered
+as well.
+*/
+@media (min-width: 1920px) {
+    .experienceTitleWrap {
+      font-size: 6.5vh;
+    }
+    .experienceTitle {
+      font-size: 2.2vh;
+    }
+    .experienceDesc {
+      font-size: 2vh;
+    }
+  }
+  
+  @media (max-width: 1536px) and (min-width: 1366px) {
+    .experienceTitleWrap {
+      font-size: 6vh;
+    }
+    .experienceTitle {
+      font-size: 2.5vh;
+    }
+    .experienceDesc {
+      font-size: 1.8vh;
+    }
+  }
+  
+  @media (max-width: 1366px) and (min-width: 1280px) {
+    .experienceTitleWrap {
+      font-size: 5.5vh;
+    }
+    .experienceTitle {
+      font-size: 2.3vh;
+    }
+    .experienceDesc {
+      font-size: 1.6vh;
+    }
+  }
+  
+  @media (max-width: 1280px) and (min-width: 1024px) {
+    .experienceTitleWrap {
+      font-size: 5vh;
+    }
+    .experienceTitle {
+      font-size: 2.2vh;
+    }
+    .experienceDesc {
+      font-size: 1.5vh;
+    }
+  }
+  
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .experienceTitleWrap {
+      font-size: 4.5vh;
+    }
+    .experienceTitle {
+      font-size: 2vh;
+    }
+    .experienceDesc {
+      font-size: 1.4vh;
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width: 640px) {
+    .experienceTitleWrap {
+      font-size: 4vh;
+    }
+    .experienceTitle {
+      font-size: 1.8vh;
+    }
+    .experienceDesc {
+      font-size: 1.2vh;
+    }
+  }
+  
+  @media (max-width: 640px) and (min-width: 360px) {
+    .experienceTitleWrap {
+      font-size: 3.5vh;
+    }
+    .experienceTitle {
+      font-size: 1.5vh;
+      line-height:1.1
+    }
+    .experienceDesc {
+      font-size: 1vh;
+    }
+
+  }
+  
+  @media (max-width: 360px) {
+    .experienceTitleWrap {
+      font-size: 3vh;
+    }
+    .experienceTitle {
+      font-size: 1.4vh;
+      line-height:1.1
+    }
+    .experienceDesc {
+      font-size: 0.8vh;
+    }
+  }
+  

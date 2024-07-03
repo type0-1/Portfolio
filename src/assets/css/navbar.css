@@ -1,0 +1,91 @@
+/*
+This file "navbar.css" contains media queries which styles the 
+CSS differently for each component depending on the resolution
+the user is viewing the website on.
+
+This website has mostly been tested on resolutions that use a 
+4:3 aspect ratio, though other phone sizes have been considered
+as well.
+*/
+
+@media (min-width: 1920px) {
+    .navbarLogo img {
+      height: 80%;
+      width: 30%;
+    }
+    .navBarSection h1 {
+      font-size: 2.3vh;
+    }
+  }
+  
+  @media (max-width: 1536px) and (min-width: 1366px) {
+    .navbarLogo img {
+      height: 70%;
+      width: 25%;
+    }
+    .navBarSection h1 {
+      font-size: 2.5vh;
+    }
+  }
+  
+  @media (max-width: 1366px) and (min-width: 1280px) {
+    .navbarLogo img {
+      height: 60%;
+      width: 20%;
+    }
+    .navBarSection h1 {
+      font-size: 2.8vh;
+    }
+  }
+  
+  @media (max-width: 1280px) and (min-width: 1024px) {
+    .navbarLogo img {
+      height: 50%;
+      width: 18%;
+    }
+    .navBarSection h1 {
+      font-size: 2.6vh;
+    }
+  }
+  
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .navbarLogo img {
+      height: 45%;
+      width: 15%;
+    }
+    .navBarSection h1 {
+      font-size: 2.5vh;
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width: 640px) {
+    .navbarLogo img {
+      height: 40%;
+      width: 13%;
+    }
+    .navBarSection h1 {
+      font-size: 2vh;
+    }
+  }
+  
+  @media (max-width: 640px) and (min-width: 360px) {
+    .navbarLogo img {
+      height: 35%;
+      width: 35%;
+    }
+    .navBarSection h1 {
+      font-size: 1.2vh;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .navbarLogo img {
+      height: 30%;
+      width: 30%;
+    }
+    .navBarSection h1 {
+      font-size: 1vh;
+    
+    }
+  }
+  

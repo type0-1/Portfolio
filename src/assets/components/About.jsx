@@ -1,13 +1,28 @@
+/*
+Imports for:
+
+React: For React functionality
+GSAP: For animation
+Images: For pictures
+CSS: For media queries (resolution)
+*/
+
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import computeTY from "../images/ComputeTY.png";
+import "../css/about.css"
 
 gsap.registerPlugin(ScrollTrigger);
 
+// About component function.
+
 function About() {
+  
+  // Directly using the useGSAP hook
   useGSAP(() => {
+    // Animating the image first.
     gsap.fromTo(
       ".imgOfMe img",
       { opacity: 0, x: 15 },
@@ -16,11 +31,11 @@ function About() {
         x: 0,
         duration: 1,
         ease: "power3.out",
-        scrollTrigger: {
+        scrollTrigger: { // Animation that plays when enering, leaving, entering back or leaving again.
           trigger: ".imgOfMe img",
-          start: "top 80%",
-          end: "bottom 40%",
-          scroller: ".mainScrollContainer",
+          start: "top 80%", // Starting point that triggers the animation
+          end: "bottom 40%", // End point that triggers the animation
+          scroller: ".mainScrollContainer", // Use the main scroller.
           onEnter: () => {
             gsap.to(".imgOfMe img", { opacity: 1, x: 0, duration: 1 });
           },
@@ -37,6 +52,8 @@ function About() {
       }
     );
 
+    // Animating each title letter.
+
     gsap.fromTo(
       ".aboutLetter",
       {
@@ -49,7 +66,7 @@ function About() {
         scale: 1,
         y: 0,
         ease: "back.out(1.7)",
-        scrollTrigger: {
+        scrollTrigger: { // Animating the letter based on the four scenarios (onEnter, onLeave, onEnterBack, onLeaveBack)
           scroller: ".mainScrollContainer",
           trigger: ".aboutLetter",
           onEnter: () => {
@@ -84,6 +101,7 @@ function About() {
       }
     );
 
+    // Animating the underline under the about title.
     gsap.fromTo(
       ".titleLine",
       {
@@ -125,6 +143,7 @@ function About() {
       }
     );
 
+    // Animating the subtitle 
     gsap.fromTo(
       ".aboutTitle2",
       {
@@ -169,6 +188,7 @@ function About() {
       }
     );
 
+    // Animating the description
     gsap.fromTo(
       ".aboutDesc",
       {
@@ -212,11 +232,12 @@ function About() {
     );
   }, []);
 
+  // Return statement using HTML and TailwindCSS.
   return (
     <div className="aboutSection relative h-screen w-screen flex flex-col items-center justify-center">
       <div className="aboutTitleWrap absolute flex items-center justify-center transform left-1/2 top-[20%] -translate-x-1/2 -translate-y-1/ font-bold text-[7vh] text-[#222222]">
         {['A', 'b', 'o', 'u', 't'].map((letter, index) => (
-          <div key={index} className="aboutLetter">{letter}</div>
+          <div key={index} className="aboutLetter">{letter}</div> // Display each letter using a map method based on the title letters.
         ))}
         <div className="titleLine w-[0%] h-[5px] bg-[#EF8354] absolute bottom-[2%]"></div>
       </div>

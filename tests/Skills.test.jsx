@@ -1,3 +1,14 @@
+/// <reference types="vitest" />
+
+/* 
+Importing necessary libraries and the About component for testing.
+
+React: For react functionality
+Skills: The skills component
+Render: Rendering components for testing.
+Chai: Assertion library.
+*/
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import Skills from '../src/assets/components/Skills';
@@ -5,6 +16,10 @@ import { expect } from 'chai';
 
 describe('Skills component', () => {
   it('renders without crashing and contains the main div components', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they exist.
+    */
     const { container } = render(<Skills />);
 
     const skillSection = container.querySelector('.skillSection');
@@ -21,6 +36,10 @@ describe('Skills component', () => {
   });
 
   it('contains the correct text content in skill sections', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the right content.
+    */
     const { container } = render(<Skills />);
 
     const skillSections = container.querySelectorAll('.skillSection');
@@ -38,6 +57,10 @@ describe('Skills component', () => {
   });
 
   it('contains the correct class names', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the respective class names associated with it.
+    */
     const { container } = render(<Skills />);
 
     const skillTitleWrap = container.querySelector('.skillTitleWrap');

@@ -1,3 +1,14 @@
+/// <reference types="vitest" />
+
+/* 
+Importing necessary libraries and the About component for testing.
+
+React: For react functionality
+Projects: The projects component
+Render: Rendering components for testing.
+Chai: Assertion library.
+*/
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import Projects from '../src/assets/components/Projects';
@@ -5,6 +16,10 @@ import { expect } from 'chai';
 
 describe('Projects component', () => {
   it('renders without crashing and contains the main div components', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they exist.
+    */
     const { container } = render(<Projects />);
 
     const projectSection = container.querySelector('.projectSection');
@@ -24,6 +39,10 @@ describe('Projects component', () => {
   });
 
   it('contains the correct text content in project cards', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the right content in project cards.
+    */
     const { container } = render(<Projects />);
 
     const projectTitles = [
@@ -53,6 +72,10 @@ describe('Projects component', () => {
   });
 
   it('contains the correct class names', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the respective class names associated with it.
+    */
     const { container } = render(<Projects />);
 
     const projectTitleWrap = container.querySelector('.projectTitleWrap');

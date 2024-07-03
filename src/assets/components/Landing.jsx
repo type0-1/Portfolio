@@ -1,3 +1,12 @@
+/*
+Important imports for libraries:
+
+React: For react functionality
+GSAP: For animations
+Images: For images.
+CSS: For media queries (resolution)
+*/
+
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -7,8 +16,11 @@ import github from "../images/github-logo-svgrepo-com.png"
 import gmail from "../images/gmail.png"
 import linkedin from "../images/linkedin.png"
 
+import "../css/landing.css"
+
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
+// Landing function, passing the isAnimationComplete hook from App.jsx
 function Landing({ onComplete }) {
 
   // Function to wrap each letter in a span
@@ -17,6 +29,8 @@ function Landing({ onComplete }) {
       <span key={index} className="introLetter">{letter}</span>
     ));
   };
+
+  // Animate final background
 
   function animFinal() {
     const t = gsap.timeline();
@@ -27,6 +41,8 @@ function Landing({ onComplete }) {
     });
     return t;
   }
+
+  // Animate the intro letters.
 
   function animIntroDesc() {
     const t = gsap.timeline();
@@ -47,6 +63,7 @@ function Landing({ onComplete }) {
     return t;
   }
 
+  // Animate the short description above introduction
   function animName() {
     const t = gsap.timeline();
 
@@ -65,6 +82,8 @@ function Landing({ onComplete }) {
     return t;
   }
 
+  // Animate the contact text
+
   function animContactText(){
     const t = gsap.timeline()
 
@@ -80,6 +99,8 @@ function Landing({ onComplete }) {
 
     return t 
   }
+
+  // Animate the contact images.
 
   function animImg(){
     const t = gsap.timeline()
@@ -101,6 +122,8 @@ function Landing({ onComplete }) {
     return t 
   }
 
+  // Using a useGSAP hook for animation timing.
+
   useGSAP(() => {
     const main = gsap.timeline({
       onComplete: onComplete,
@@ -111,6 +134,8 @@ function Landing({ onComplete }) {
     main.add(animContactText(), "-=4")
     main.add(animImg(), "-=2")
   }, [onComplete]);
+
+  // Similar to functionality in Navbar.jsx, where I animate the images based on the mouse entering and leaving its div/area using a useEffect hook.
 
   useEffect(() => {
     const imgs = document.querySelectorAll(".img");
@@ -126,6 +151,7 @@ function Landing({ onComplete }) {
     });
   }, []);
 
+  // Return statement using HTML and TailwindCSS.
   return (
     <div className="relative bg-black overflow-x-hidden h-screen w-screen text-[white] z-[50]">
       <div className="finalBG relative overflow-x-hidden h-screen w-screen bg-white z-0">

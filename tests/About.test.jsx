@@ -1,11 +1,27 @@
 /// <reference types="vitest" />
+
+/* 
+Importing necessary libraries and the About component for testing.
+
+React: For react functionality
+About: The about component
+Render: Rendering components for testing.
+Chai: Assertion library.
+*/
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import About from '../src/assets/components/About';
 import { expect } from 'chai';
 
 describe('About component', () => {
-  it('renders without crashing and contains the main div components', () => {
+  it('Renders without crashing and contains the main div components', () => {
+    
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they exist.
+    */
+
     const { container } = render(<About />);
 
     const aboutSection = container.querySelector('.aboutSection');
@@ -24,7 +40,11 @@ describe('About component', () => {
     expect(aboutDescWrap).to.exist;
   });
 
-  it('contains the correct text content', () => {
+  it('Contains the correct text content', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the right content/letters.
+    */
     const { container } = render(<About />);
 
     const aboutTitleWrap = container.querySelector('.aboutTitleWrap');
@@ -41,7 +61,11 @@ describe('About component', () => {
     expect(aboutDesc.textContent).to.include('I am a third-year Computer Science student at DCU');
   });
 
-  it('contains the correct class names', () => {
+  it('Contains the correct class names', () => {
+    /*
+    Render the component and stores it in container.
+    Initiate different variables and select each class to check that they contain the respective class names associated with it.
+    */
     const { container } = render(<About />);
 
     const titleLine = container.querySelector('.titleLine');

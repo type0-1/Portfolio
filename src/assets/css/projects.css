@@ -1,0 +1,174 @@
+/*
+This file "projects.css" contains media queries which styles the 
+CSS differently for each component depending on the resolution
+the user is viewing the website on.
+
+This website has mostly been tested on resolutions that use a 
+4:3 aspect ratio, though other phone sizes have been considered
+as well.
+*/
+
+
+@media (min-width: 1920px) {
+    .projectTitleWrap {
+      font-size: 6vh;
+    }
+    .projectTitleText {
+      font-size: 3vh;
+    }
+    .projectDesc {
+      font-size: 2.5vh;
+    }
+    .projectButton {
+      font-size: 3vh;
+      height: 80%;
+      width: 50%;
+    }
+    .projectCard {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 1536px) and (min-width: 1366px) {
+    .projectTitleWrap {
+      font-size: 5.5vh;
+    }
+    .projectTitleText {
+      font-size: 2.7vh;
+    }
+    .projectDesc {
+      font-size: 2.3vh;
+    }
+    .projectButton {
+      font-size: 2.7vh;
+      height: 70%;
+      width: 45%;
+    }
+    .projectCard {
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 1366px) and (min-width: 1280px) {
+    .projectTitleWrap {
+      font-size: 5vh;
+    }
+    .projectTitleText {
+      font-size: 2.5vh;
+    }
+    .projectDesc {
+      font-size: 2.1vh;
+    }
+    .projectButton {
+      font-size: 2.5vh;
+      height: 65%;
+      width: 40%;
+    }
+    .projectCard {
+      height: 320px;
+    }
+  }
+  
+  @media (max-width: 1280px) and (min-width: 1024px) {
+    .projectTitleWrap {
+      font-size: 4.5vh;
+    }
+    .projectTitleText {
+      font-size: 2.3vh;
+    }
+    .projectDesc {
+      font-size: 1.9vh;
+    }
+    .projectButton {
+      font-size: 2.3vh;
+      height: 60%;
+      width: 35%;
+    }
+    .projectCard {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .projectTitleWrap {
+      font-size: 4vh;
+    }
+    .projectTitleText {
+      font-size: 2vh;
+    }
+    .projectDesc {
+      font-size: 0vh;
+    }
+    .projectButton {
+      font-size: 2vh;
+      height: 75%;
+      width: 50%;
+    }
+    .projectCard {
+      height: 280px;
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width: 640px) {
+    .projectTitleWrap {
+      font-size: 3.5vh;
+    }
+    .projectTitleText {
+      font-size: 1.8vh;
+    }
+    .projectDesc {
+      font-size: 0vh;
+    }
+    .projectButton {
+      font-size: 1.8vh;
+      height: 100%;
+      width: 60%;
+    }
+    .projectCard {
+      height: 260px;
+    }
+  }
+  
+  @media (max-width: 640px) and (min-width: 360px) {
+    .projectTitleWrap {
+      font-size: 3vh;
+    }
+    .projectTitleText {
+      font-size: 1.5vh;
+    }
+    .projectDesc {
+      font-size: 0vh;
+    }
+    .projectButton {
+      font-size: 1.6vh;
+      height: 65%;
+      width: 100%;
+    }
+    .projectCard {
+      height: 240px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .projectTitleWrap {
+      font-size: 2.5vh;
+    }
+    .projectTitleText {
+      font-size: 1.5vh;
+    }
+    .projectDesc {
+      font-size: 0vh;
+    }
+    .projectDescWrap {
+        width:100%
+      }
+    .projectButton {
+      font-size: 0.8vh;
+      height: 100%;
+      width: 100%;
+    }
+    .projectCard {
+      height: 220px;
+    }
+  }
+  

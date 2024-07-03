@@ -1,7 +1,17 @@
+/*
+Imports for:
+
+React: For React functionality
+GSAP: For animation
+CSS: For media queries (resolution)
+*/
+
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+
+import "../css/experiences.css"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,8 +30,8 @@ function Experiences() {
         scale: 1,
         y: 0,
         ease: "back.out(1.7)",
-        scrollTrigger: {
-          trigger: ".experienceTitleWrap",
+        scrollTrigger: { // Scroll trigger for animating the title "Experience"
+          trigger: ".experienceTitleWrap", // The div wrapping the letters is the trigger
           scroller: ".mainScrollContainer",
           start: "top 80%",
           onEnter: () => {
@@ -194,6 +204,7 @@ function Experiences() {
     );
   });
 
+  // Return statement using HTML and TailwindCSS.
   return (
     <div className="experienceSection relative h-screen w-screen">
       <div className="experienceTitleWrap absolute w-[20%] h-[10%] justify-center items-center flex transform left-1/2 top-[20%] -translate-x-1/2 -translate-y-1/ font-bold text-[6.5vh] text-[#222222]">

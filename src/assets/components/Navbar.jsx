@@ -1,10 +1,18 @@
+/* 
+Important React and GSAP imports.
+*/
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react";
 import logo from '../images/logo.png';
 
+// Importing CSS in order to show portfolio based on different resolutions.
+import "../css/navbar.css"
+
+// Navbar component function.
 function Navbar() {
 
+  // Function which uses GSAP to animate the Navbar as the user enters.
   function animNav(){
     const t = gsap.timeline();
     t.fromTo('.navBar',{
@@ -18,6 +26,7 @@ function Navbar() {
     }, "+=5");
   }
 
+  // Animating the thin line associated with the navbar.
   function animLine(){
     const t = gsap.timeline();
 
@@ -30,8 +39,9 @@ function Navbar() {
     });
 
     return t;
-  }
+  } 
 
+  // Animating the logo
   function animLogo(){
     const t = gsap.timeline();
 
@@ -47,6 +57,7 @@ function Navbar() {
     return t; 
   }
 
+  // Animating each nav bar section.
   function animSections(){
     const t = gsap.timeline();
 
@@ -66,6 +77,7 @@ function Navbar() {
     return t; 
   }
 
+  // useGSAP hook for managing animation timing.
   useGSAP(()=>{
     const main = gsap.timeline();
     main.add(animNav());
@@ -74,6 +86,7 @@ function Navbar() {
     main.add(animSections());
   });
 
+  // useEffect which is used for when the user hovers and clicks each
   useEffect(() => {
     const links = gsap.utils.toArray(".navBarSection a");
 

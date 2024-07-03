@@ -1,3 +1,10 @@
+/*
+Imports for:
+
+React: For React functionality
+GSAP: For animation
+CSS: For media queries (resolution)
+*/
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -5,8 +12,11 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
+import "../css/projects.css"
+
 function Projects() {
 
+  // useGSAP hook for animating various parts of the component.
   useGSAP(()=>{
     // Animating project letters
     gsap.fromTo('.projectLetter',{
@@ -102,8 +112,8 @@ function Projects() {
       scrollTrigger:{
         scroller:".mainScrollContainer",
         trigger:".projectWrap",
-        start: "top 80%", // Adjust this as needed
-        end: "bottom 40%", // Adjust this as needed
+        start: "top 80%",
+        end: "bottom 40%",
         onEnter: () => {
           gsap.to('.projectCard', {
             opacity:1,
@@ -114,28 +124,6 @@ function Projects() {
             }
           });
         },
-        onLeave: () => {
-          gsap.to('.projectCard', {
-            opacity:0,
-            y:20,
-          });
-        },
-        onEnterBack: () => {
-          gsap.to('.projectCard', {
-            opacity:1,
-            y:0,
-            duration:1,
-            stagger:{
-              each:0.2,
-            }
-          });
-        },
-        onLeaveBack: () => {
-          gsap.to('.projectCard', {
-            opacity:0,
-            y:20,
-          });
-        }
       }
     });
 
@@ -150,8 +138,8 @@ function Projects() {
       scrollTrigger:{
         scroller:".mainScrollContainer",
         trigger:".projectWrap",
-        start: "top 80%", // Adjust this as needed
-        end: "bottom 40%", // Adjust this as needed
+        start: "top 80%",
+        end: "bottom 40%",
         onEnter: () => {
           gsap.to('.projectTitleText, .projectDesc, .projectButton', {
             opacity:1,
@@ -189,6 +177,8 @@ function Projects() {
 
   });
 
+  // Similar useEffect hook used in the Landing.jsx page for the image hover effect.
+
   useEffect(() => {
     const buttons = document.querySelectorAll('.projectButton');
 
@@ -210,6 +200,8 @@ function Projects() {
       });
     });
   }, []);
+
+  // Return statement using HTML and TailwindCSS.
 
   return (
     <div className="projectSection relative h-screen w-screen">
