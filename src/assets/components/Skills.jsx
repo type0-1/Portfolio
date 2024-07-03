@@ -4,7 +4,7 @@ Importing necessary libraries:
 React: For react functionality
 GSAP: For animations
 Images: For showcasing skills
-Images: For media queries (resolution)
+CSS: For media queries (resolution)
 */
 import React from "react";
 import { gsap } from "gsap";
