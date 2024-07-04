@@ -243,11 +243,17 @@ function Skills() {
   return (
     <div className="skillSection relative h-screen w-screen">
       <div className="skillTitleWrap absolute w-[20%] h-[10%] justify-center items-center flex transform left-1/2 top-[20%] -translate-x-1/2 -translate-y-1/ font-bold text-[7vh] text-[#222222]">
-        <div className="skillLetter">S</div>
-        <div className="skillLetter">k</div>
+        <div className="skillLetter">T</div>
+        <div className="skillLetter">e</div>
+        <div className="skillLetter">c</div>
+        <div className="skillLetter">h</div>
+        <div className="skillLetter">n</div>
+        <div className="skillLetter">o</div>
+        <div className="skillLetter">l</div>
+        <div className="skillLetter">o</div>
+        <div className="skillLetter">g</div>
         <div className="skillLetter">i</div>
-        <div className="skillLetter">l</div>
-        <div className="skillLetter">l</div>
+        <div className="skillLetter">e</div>
         <div className="skillLetter">s</div>
         <div className="titleLine2 w-[35%] h-[5px] bg-[#EF8354] absolute bottom-[2%]"></div>
       </div>
