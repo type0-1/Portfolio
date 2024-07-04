@@ -105,7 +105,7 @@ function Landing({ onComplete }) {
   function animImg(){
     const t = gsap.timeline()
 
-    t.fromTo('.img',{
+    t.fromTo('.imgSelect',{
       y:-20,
       opacity:0, 
       rotation:7,
@@ -138,7 +138,7 @@ function Landing({ onComplete }) {
   // Similar to functionality in Navbar.jsx, where I animate the images based on the mouse entering and leaving its div/area using a useEffect hook.
 
   useEffect(() => {
-    const imgs = document.querySelectorAll(".img");
+    const imgs = document.querySelectorAll(".imgSelect");
 
     imgs.forEach(img => {
       img.addEventListener("mouseenter", () => {
@@ -180,17 +180,17 @@ function Landing({ onComplete }) {
           <h1 className="contactText text-[#222222] text-[3vh] font-bold">Want to get in contact?</h1>
         </div>
         <div className="contactsWrap absolute h-[10%] w-[20%] left-1/2 top-[93%] transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center flex flex-row space-x-8">
-          <div className="img h-[70%] w-[20%]">
+          <div className="imgSelect h-[70%] w-[20%]">
             <a href="https://github.com/type0-1" target="_blank" rel="noopener noreferrer">
               <img src={github} alt="GitHub" />
             </a>
           </div>
-          <div className="img h-[70%] w-[20%]">
+          <div className="imgSelect h-[70%] w-[20%]">
             <a href="mailto:samson-oloruntola4@outlook.com">
               <img src={gmail} alt="Email" />
             </a>
           </div>
-          <div className="img h-[70%] w-[20%]">
+          <div className="imgSelect h-[70%] w-[20%]">
             <a href="https://www.linkedin.com/in/samson-oloruntola-248bb5225/" target="_blank" rel="noopener noreferrer">
               <img src={linkedin} alt="LinkedIn" />
             </a>

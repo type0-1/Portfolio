@@ -8,168 +8,201 @@ This website has mostly been tested on resolutions that use a
 as well.
 */
 
+.nameWrap, .introDescWrap, .contactWrap, .contactsWrap {
+  position: absolute;
+}
+
+.imgSelect img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
+}
 
 @media (min-width: 1920px) {
-    .nameWrap {
-      font-size: 3vh;
-      width:50%
-    }
-    .introDescWrap{
-      height:15%
-    }
-    .introDesc{
-      font-size:4.8vh
-    }
-    .contactText {
-      font-size: 3vh;
-    }
-    .contactWrap{
-        width:50%
-    }
-    .img {
-      height: 70%;
-      width: 20%;
-    }
+  .nameWrap {
+    font-size: 3vh;
+    width: 50%;
   }
-  
-  @media (max-width: 1919px) and (min-width: 1366px) {
-    .nameWrap {
-      font-size: 2.5vh;
-      width:50%
-    }
-    .introDesc {
-      font-size: 5.8vh;
-    }
-    .contactText {
-      font-size: 2.5vh;
-    }
-    .contactWrap{
-        width:50%
-    }
-    .img {
-      height: 60%;
-      width: 18%;
-    }
+  .introDescWrap {
+    height: 15%;
   }
-  
-  @media (max-width: 1366px) and (min-width: 1280px) {
-    .nameWrap {
-      font-size: 2.vh;
-    }
-    .introDesc {
-      font-size: 5vh;
-    }
-    .contactText {
-      font-size: 2.2vh;
-    }
-    .img {
-      height: 55%;
-      width: 16%;
-    }
+  .introDesc {
+    font-size: 4.8vh;
   }
-  
-  @media (max-width: 1280px) and (min-width: 1024px) {
-    .nameWrap {
-      font-size: 2vh;
-      width:50%
-    }
-    .introDesc {
-      font-size: 4.5vh;
-    }
-    .contactText {
-      font-size: 4vh;
-    }
-    .contactWrap{
-        width:50%
-    }
-    .img {
-      height: 50%;
-      width: 15%;
-    }
+  .contactText {
+    font-size: 3vh;
   }
-  
-  @media (max-width: 1024px) and (min-width: 768px) {
-    .nameWrap {
-      font-size: 1.8vh;
-      width:50%
-    }
-    .introDesc {
-      font-size: 4.5vh;
-    }
-    .introDescWrap{
-        height:20%
-    }
-    .contactText {
-      font-size: 3.8vh;
-    }
-    .contactWrap {
-        width:50%
-    }
-    .img {
-      height: 15%;
-      width: 14%;
-    }
+  .contactWrap {
+    width: 50%;
   }
-  
-  @media (max-width: 768px) and (min-width: 640px) {
-    .nameWrap {
-      font-size: 1.5vh;
-    }
-    .introDesc {
-      font-size: 3.5vh;
-    }
-    .contactText {
-      font-size: 1.6vh;
-    }
-    .img {
-      height: 40%;
-      width: 13%;
-    }
+  .imgSelect {
+    height: 70%;
+    width: 20%;
   }
-  
-  @media (max-width: 640px) and (min-width: 360px) {
-    .nameWrap {
-      font-size: 1.8vh;
-      width:80%;
-      height:10%
-    }
-    .introDescWrap{
-        height:10%;
-        width:50%;
-    }
-    .introDesc {
-       font-size: 2.5vh;
-       text-align:center;
-    }
-    .contactWrap{
-        width:80%
-    }
-    .contactText {
-      font-size: 2.4vh;
-    }
-    .img {
-      height: 40%;
-      width: 12%;
-      scale:1.2;
-    }
+}
+
+@media (max-width: 1919px) and (min-width: 1366px) {
+  .nameWrap {
+    font-size: 2.5vh;
+    width: 50%;
   }
-  
-  @media (max-width: 360px) {
-    .nameWrap {
-      font-size: 1vh;
-      width:100%
-    }
-    .introDesc {
-      font-size: 2.5vh;
-    }
-    .introDescWrap{
-        height:10%
-    }
-    .contactText {
-      font-size: 2.2vh;
-    }
-    .contactWrap{
-        width:80%
-    }
+  .introDesc {
+    font-size: 5.8vh;
   }
-  
+  .contactText {
+    font-size: 2.5vh;
+  }
+  .contactWrap {
+    width: 50%;
+  }
+  .imgSelect {
+    height: 60%;
+    width: 18%;
+  }
+  .contactsWrap {
+    height:15%;
+    width: 30%;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 1280px) {
+  .nameWrap {
+    font-size: 2vh;
+  }
+  .introDesc {
+    font-size: 5vh;
+  }
+  .contactText {
+    font-size: 2.2vh;
+  }
+  .imgSelect {
+    height: 55%;
+    width: 16%;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .nameWrap {
+    font-size: 2vh;
+    width: 50%;
+  }
+  .introDesc {
+    font-size: 4.5vh;
+  }
+  .contactText {
+    font-size: 4vh;
+  }
+  .contactWrap {
+    width: 50%;
+  }
+  .imgSelect {
+    height: 50%;
+    width: 15%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .nameWrap {
+    font-size: 1.8vh;
+    width: 50%;
+  }
+  .introDesc {
+    font-size: 4.5vh;
+  }
+  .introDescWrap {
+    height: 20%;
+  }
+  .contactText {
+    font-size: 3.8vh;
+  }
+  .contactWrap {
+    width: 50%;
+  }
+  .imgSelect {
+    height: 15%;
+    width: 14%;
+  }
+  .contactsWrap {
+    height:50%;
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 640px) {
+  .nameWrap {
+    font-size: 1.5vh;
+  }
+  .introDesc {
+    font-size: 3.5vh;
+  }
+  .contactText {
+    font-size: 2.5vh;
+  }
+  .imgSelect {
+    height: 40%;
+    width: 13%;
+  }
+  .contactsWrap {
+    height:0%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 360px) {
+  .nameWrap {
+    font-size: 1.8vh;
+    width: 80%;
+    height: 10%;
+  }
+  .introDescWrap {
+    height: 10%;
+    width: 50%;
+  }
+  .introDesc {
+    font-size: 2.5vh;
+    text-align: center;
+  }
+  .contactWrap {
+    width: 80%;
+  }
+  .contactText {
+    font-size: 2.4vh;
+  }
+  .imgSelect {
+    height: 40%;
+    width: 20%;
+    scale: 1.5;
+  }
+  .contactsWrap {
+    height:10%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 360px) {
+  .nameWrap {
+    font-size: 1vh;
+    width: 100%;
+  }
+  .introDesc {
+    font-size: 2.5vh;
+  }
+  .introDescWrap {
+    height: 10%;
+  }
+  .contactText {
+    font-size: 2.2vh;
+  }
+  .contactWrap{
+    width:80%
+  }
+  .contactsWrap {
+    height:0%;
+    width: 50%;
+  }
+  .imgSelect {
+    display: block;
+    scale: 3;
+  }
+}
