@@ -37,7 +37,7 @@ describe('Landing component', () => {
     const contactsWrap = container.querySelector('.contactsWrap');
     expect(contactsWrap).to.exist;
 
-    const imgElements = container.querySelectorAll('.img');
-    expect(imgElements.length).to.equal(3); // Assuming you have three images
+    const imgElements = container.querySelectorAll('.imgSelect');
+    expect(imgElements.length).to.equal(3);
   });
 });

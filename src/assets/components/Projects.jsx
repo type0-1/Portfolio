@@ -264,7 +264,7 @@ function Projects() {
             <div className="projectDescWrap h-[70%] w-[100%] p-4">
                 <h1 className="projectDesc text-center text-[2.5vh] text-[#222222]">HTML, Tailwind, Javascript, React, Vite, Greensock Animation Platform</h1>
             </div>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center w-full">
+            <a href="https://github.com/type0-1/Website-Portfolio-V2" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center w-full">
                 <div className="projectButton bg-[#EF8354] h-[80%] w-[50%] mb-2 rounded-xl text-center items-center justify-center flex text-[3vh]">More info</div>
             </a>
           </div>
