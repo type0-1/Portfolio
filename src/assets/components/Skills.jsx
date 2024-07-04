@@ -6,6 +6,7 @@ GSAP: For animations
 Images: For showcasing skills
 CSS: For media queries (resolution)
 */
+
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";

@@ -93,13 +93,17 @@ function Navbar() {
     links.forEach(link => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
+        // Try and get the href associated via its substring..
         const targetId = link.getAttribute("href").substring(1);
         const targetElement = document.getElementById(targetId);
+        // Scroll into appropriate section smoothly
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
       });
     });
+
+    // If the mouse has entered its Div, animate using GSAP.
 
     links.forEach(link => {
         link.addEventListener("mouseenter", () => {
@@ -108,7 +112,9 @@ function Navbar() {
             duration: 0.3,
             color:"#EF8354", });
         });
-  
+
+    // If the mouse has left the Div, animate using GSAP.
+
         link.addEventListener("mouseleave", () => {
           gsap.to(link, { 
             scale: 1, 
@@ -118,6 +124,8 @@ function Navbar() {
       });
 
   }, []);
+
+  // Return function using HTML and CSS.
 
   return (
     <div className="navBar fixed flex justify-center bg-white h-[10%] w-full z-[40]">
