@@ -35,7 +35,7 @@ Included in this repository is a comprehensive Software Design Document. This do
 This document serves as a practice in creating and refining future Software Design Documents, offering an in-depth look at the project's development.
 
 ## Current Status
-Both the website and the Software Design Document are works in progress (WIP).
+Both the website and the Software Design Document are now completed. Version 1.0
 
 ## Software Design Document
 The Software Design Document, which includes details on planning, implementation, tech stack, flowcharts, wireframing, testing, and UI & UX considerations, can be found [here](https://docs.google.com/document/d/1yzzPMPEkCv0HUanihb0-XPzGV6Z8txedYXVlUFerpM8/edit?usp=sharing). This document is also discussed in my GitHub README to provide further insights into the project development process.
