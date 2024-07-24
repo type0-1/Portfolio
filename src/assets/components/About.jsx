@@ -245,7 +245,7 @@ function About() {
         <img src={computeTY} className="h-full rounded-3xl" alt="Compute TY"></img>
       </div>
       <div className="aboutTitle2Wrap w-[40%] h-[10%] absolute left-[5%] top-[45%]">
-        <h1 className="aboutTitle2 text-[#222222] font-bold text-[7vh]">
+        <h1 className="aboutTitle2 text-[#222222] font-bold text-xl">
           More about my <span className="text-[#EF8354]">journey</span>
         </h1>
       </div>
